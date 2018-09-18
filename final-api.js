@@ -150,10 +150,10 @@ var totalWealthCreatedOneDay =  paidRewards*noOfBlockPerDay;
 var rewardOneMasterNode = totalWealthCreatedOneDay/activeMasternodes;
 var minerRewardOneYear = rewardOneMasterNode * 365;
 var yearlyROI = (minerRewardOneYear/requiredCoins) * 100;
-var actualRoi = {"yearlyROI" : yearlyROI};
+//var actualRoi = {"yearlyROI" : yearlyROI};
 
 res.contentType('application/json');
-res.end(JSON.stringify(actualRoi));
+res.end(JSON.stringify(yearlyROI));
 });
 app.use('/actualRoi', createKeyPair);
 
